@@ -1,0 +1,10 @@
+.BackGround{
+    background: url('../assets/FondEcran.png') ; /* Ajoutez le chemin de votre image */
+    height: 100vh;
+    background-size: cover;    
+}
+
+
+body{
+    margin: 0px;
+}

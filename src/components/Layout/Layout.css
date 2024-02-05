@@ -1,0 +1,28 @@
+.Layout{
+    display: flex;
+    /* background-image: linear-gradient(to right, #3c669e, #345b90, #2c5182, #244775, #1c3d68); */
+    left:0;
+    right:0;
+    top:0;  
+    height: 70px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px ;
+}
+
+.Text{
+    color: white;
+    font-size:70px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #F59715, 0 0 30px #F59715, 0 0 40px #F59715, 0 0 55px #F59715, 0 0 75px #F59715;
+}
+
+img{
+    width: 8%;
+    border-radius: 50%; 
+    top: 10px;
+    left: 30px;
+    position: fixed;
+    box-shadow:0 0 5px #FFF, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #F59715, 0 0 20px #F59715, 0 0 25px #F59715, 0 0 30px #F59715, 0 0 35px #F59715 ;
+}
+
