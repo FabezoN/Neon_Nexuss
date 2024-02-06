@@ -39,4 +39,21 @@ body{
 }
 
 
+/* Boutton Statisique */
+  .custom-primary-btn {
+    background-color: #F59715;
+    color: #ffffff;
+    box-shadow:0 0 5px #FFF, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #F59715, 0 0 20px #F59715, 0 0 25px #F59715, 0 0 30px #F59715, 0 0 35px #F59715 ;
+  }
+  
+  .custom-hover:hover {
+    background-color: #00ccff;
+    color: #030303;
+    box-shadow:0 0 5px #FFF, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #00ccff, 0 0 20px #00ccff, 0 0 25px #00ccff, 0 0 30px #00ccff, 0 0 35px #00ccff ;
+  }
 
+  .BtnStat{
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+  }

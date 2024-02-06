@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import Morpion from '../pages/Morpion';
 import Pendu from '../pages/Pendu';
-
+import Statistique from '../pages/Statistique';
 
 const router = createBrowserRouter([
   {
@@ -10,13 +10,17 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: '/morpion',
+    path: '/Morpion',
     element: <Morpion />,
   },
   {
-    path: '/pendu',
-    element: <Pendu/>
-    }
+    path: '/Pendu',
+    element: <Pendu />
+  },
+  {
+    path: '/Statistique',
+    element: <Statistique />
+  }
 ]);
 
 export default router;
