@@ -3,6 +3,7 @@ import './HomePage.css';
 import Layout from '../components/Layout/Layout';
 import ImgMorpion from '../assets/Morpion.png'
 import ImgPendu from '../assets/Pendu.png'
+import { Link } from 'react-router-dom';
 
 
 const HomePage: React.FC = () => (
@@ -11,20 +12,20 @@ const HomePage: React.FC = () => (
         </Layout>
         <div className='Games'>
             <div className="Left">
-                <a href='/Morpion'>
+                <Link to="/Morpion">
                     <img src={ImgMorpion} className='ImgJeux' alt='ImgMorpion'></img>
-                </a>
+                </Link>
             </div>
             <div className="Right">
-                <a href='/Pendu'>
+                <Link to="/Pendu">
                     <img src={ImgPendu} className='ImgJeux' alt='ImgPendu'></img>
-                </a>
+                </Link>
             </div>
         </div>
         <div className='BtnStat'>
-            <a href="/Statistique">
+            <Link to="/Statistique">
                 <button type="button" className="btn custom-primary-btn custom-hover" >Statistique</button>
-            </a>
+            </Link>
         </div>
     </div>
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Board } from './board.tsx';
 import { BoardArray, checkWinner, isMovesLeft, findBestMove } from './gameLogic';
-import { StatsContext } from '../StatsContext.tsx';
+import { StatsContext } from '../StatsContext.tsx'
+import '../../pages/tic-tac-toe.sass';
+import { Link } from 'react-router-dom';
 
-import './tic-tac-toe.sass';
+
 
 export const TicTacToe: React.FC = () => {
 	const initialBoard: BoardArray = Array.from({ length: 3 }, () => Array(3).fill(null));
@@ -64,12 +66,12 @@ export const TicTacToe: React.FC = () => {
 		<div className='game'>
 			<h1>Tic-Tac-Toe</h1>
 			<Board board={board} handleClick={handleOnClick} />
-			{winner && <p>{winner === "X" ? "You Win!" : winner === "O" ? "AI Wins!" : "It's a Draw!"}</p>}
-			<button className='btn custom-primary-btn custom-hover' onClick={restartGame}>Restart Game</button>
-			<div className='BtnStat'>
-				<a href="/Statistique">
+			{winner && <h2>{winner === "X" ? "You Win!" : winner === "O" ? "AI Wins!" : "It's a Draw!"}</h2>}
+			<div className='Buttons'>
+				<button className='btn custom-primary-btn custom-hover' onClick={restartGame}>Restart Game</button>
+				<Link to="/statistique">
 					<button type="button" className="btn custom-primary-btn custom-hover" >Statistique</button>
-				</a>
+				</Link>
 			</div>
 		</div>
 	);
