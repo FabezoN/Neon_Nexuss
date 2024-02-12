@@ -1,0 +1,79 @@
+body
+    background-color: #000
+    font-family: 'Arial', sans-serif
+
+.game
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 80vh // Pour centrer verticalement sur toute la hauteur de la fenêtre
+    flex-direction: column
+    gap: 10px
+
+.board
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 10px
+    padding: 20px
+    background-color: rgba(0, 0, 0, 0.5) // Fond légèrement transparent pour l'effet de rétro-éclairage
+    border-radius: 10px
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) // Effet de rétro-éclairage
+
+    .board_row
+        display: flex
+
+    .cell
+        width: 100px
+        height: 100px
+        border-radius: 10px // Coins arrondis
+        border: solid 2px #fff // Bordure blanche
+        text-align: center
+        vertical-align: middle
+        font-size: 50px
+        font-weight: 700
+        background-color: transparent // Fond transparent pour l'effet de rétro-éclairage
+        outline: none
+        margin-bottom: 10px
+        color: #fff // Texte en blanc
+        text-shadow: 0 0 3px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1) // Effet de texte en rétro-éclairage
+
+        &:hover
+            color: inherit
+            background-color: rgba(255, 255, 255, 0.1) // Fond légèrement plus clair au survol
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7) // Effet de rétro-éclairage au survol
+
+    .cell_x
+        background: #ffac31 // Orange flashy
+        border-color: #ffac31 // Bordure orange flashy
+
+        &:hover
+            color: #ffac31 // Texte en orange flashy
+
+    .cell_o
+        background: #ff4568 // Rose flashy
+        border-color: #ff4568 // Bordure rose flashy
+
+        &:hover
+            color: #ff4568 // Texte en rose flashy
+
+p
+    text-transform: uppercase
+    font-size: 20px
+    font-weight: 500
+    margin-top: 30px
+    color: #fff // Texte en blanc
+
+.reset
+    margin-top: 20px
+    min-width: 200px
+    border-radius: 2px
+    border: none
+    background-color: #bb76ff // Violet flashy
+    color: white
+    padding: 10px 20px
+    cursor: pointer
+
+    &:hover
+        background-color: #9c5eb3 // Violet légèrement plus clair
