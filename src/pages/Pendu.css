@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+
+/* Keyboard CSS*/
+.keyboard-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .keyboard-row {
+    margin-bottom: 5px;
+  }
+  
+  .keyboard-button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .keyboard-button:hover {
+    background-color: #e0e0e0;
+  }
+  
