@@ -12,12 +12,13 @@
 }
 
 .Text{
+    text-align: center;
     color: white;
     font-size:70px;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #F59715, 0 0 30px #F59715, 0 0 40px #F59715, 0 0 55px #F59715, 0 0 75px #F59715;
 }
 
-img{
+.Logo{
     width: 8%;
     border-radius: 50%; 
     top: 10px;
