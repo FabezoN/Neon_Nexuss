@@ -10,15 +10,15 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: '/Morpion',
+    path: '/morpion',
     element: <Morpion />,
   },
   {
-    path: '/Pendu',
+    path: '/pendu',
     element: <Pendu />
   },
   {
-    path: '/Statistique',
+    path: '/statistique',
     element: <Statistique />
   }
 ]);

@@ -9,6 +9,7 @@ const StatsPage = () => {
         <div className="stats">
             <h2>Statistiques du jeu Tic-Tac-Toe</h2>
             <ul>
+
                 <li>Parties jouées : {stats.ticTacToe.gamesPlayed}</li>
                 <li>Victoires : {stats.ticTacToe.wins}</li>
                 <li>Défaites : {stats.ticTacToe.losses}</li>
@@ -21,8 +22,6 @@ const StatsPage = () => {
                 <li>Parties jouées : {stats.hangman.gamesPlayed}</li>
                 <li>Victoires : {stats.hangman.wins}</li>
                 <li>Défaites : {stats.hangman.losses}</li>
-                {/* Supposant que "draws" n'est pas directement géré pour le Pendu, ajustez si nécessaire */}
-                <li>Matchs nuls : {stats.hangman.gamesPlayed - stats.hangman.wins - stats.hangman.losses}</li>
             </ul>
         </div>
     );

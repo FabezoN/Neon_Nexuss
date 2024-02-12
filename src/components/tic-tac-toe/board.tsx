@@ -1,4 +1,6 @@
-import "./tic-tac-toe.sass";
+import '../../index.css'
+import '../../pages/tic-tac-toe.sass';
+
 
 type BoardProps = {
 	board: Array<Array<string | null>>;
