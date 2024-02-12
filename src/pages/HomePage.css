@@ -28,6 +28,7 @@ body{
 .ImgJeux{
     width: 50%;
     box-shadow:0 0 5px #FFF, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #F59715, 0 0 20px #F59715, 0 0 25px #F59715, 0 0 30px #F59715, 0 0 35px #F59715 ;
+    border-radius: 7px;
 }
 
 .Right{
