@@ -5,7 +5,7 @@ const useFetch = <T>() => {
   const [error, setError] = useState<string|null>(null);
   const [data, setData] = useState<T|undefined>(undefined);
 
-  const query = async (request: (...params: any[]) => Promise<T>) => {
+  const query = async (request: (...params: unknown[]) => Promise<T>) => {
     try {
       setLoading(true);
       setError(null);
@@ -14,7 +14,7 @@ const useFetch = <T>() => {
 
       setData(result);
       return result;
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.error(e);
       setError(e.message);
       return null;

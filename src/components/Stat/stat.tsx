@@ -21,8 +21,6 @@ const StatsPage = () => {
                 <li>Parties jouées : {stats.hangman.gamesPlayed}</li>
                 <li>Victoires : {stats.hangman.wins}</li>
                 <li>Défaites : {stats.hangman.losses}</li>
-                {/* Supposant que "draws" n'est pas directement géré pour le Pendu, ajustez si nécessaire */}
-                <li>Matchs nuls : {stats.hangman.gamesPlayed - stats.hangman.wins - stats.hangman.losses}</li>
             </ul>
         </div>
     );
