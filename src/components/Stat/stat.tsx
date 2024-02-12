@@ -9,10 +9,10 @@ const StatsPage = () => {
         <div className="stats">
             <h2>Statistiques du jeu Tic-Tac-Toe</h2>
             <ul>
-                <li>Parties jouées : {stats.gamesPlayed}</li>
-                <li>Victoires : {stats.wins}</li>
-                <li>Défaites : {stats.losses}</li>
-                <li>Matchs nuls : {stats.draws}</li>
+            <li className="GamePlay">Parties jouées : {stats.gamesPlayed}</li>
+                <li className="Win">Victoires : {stats.wins}</li>
+                <li className="Loose">Défaites : {stats.losses}</li>
+                <li className="Draw">Matchs nuls : {stats.draws}</li>
             </ul>
         </div>
     );
