@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Board } from './Board';
+import { Board } from './board.tsx';
 import { BoardArray, checkWinner, isMovesLeft, findBestMove } from './gameLogic';
 import { StatsContext } from '../StatsContext.tsx'
 
