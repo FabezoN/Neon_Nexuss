@@ -1,10 +1,93 @@
 body{
     background-color: black;
 }
+.Pendu {
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Pendu h1{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.Pendu h2{
+ text-align: center;
+}
+
+.btn-nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .flexGrid {
     display: flex;
     justify-content: center;
     gap: 5px; /* Espace entre les boîtes de la grille */
+}
+.Clavie {
+    width: 600px; /* 25% plus large que l'ancien style */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Augmentation de l'espace entre les éléments */
+    margin-bottom: 25px;
+    padding: 25px; /* Augmentation de la marge intérieure */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12.5px; /* Arrondir les angles */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 12.5px; /* Espacement entre les touches */
+}
+.keyboard-key {
+    width: 50px; /* 25% plus grand que l'original */
+    height: 50px; /* 25% plus grand que l'original */
+    border-radius: 10px; /* Conserve le même arrondi pour rester cohérent avec le design */
+    border: solid 2px #fff; /* Conserve la même épaisseur de bordure */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px; /* 25% plus grand que l'original */
+    font-weight: 700;
+    background-color: transparent; /* Conserve le fond transparent */
+    outline: none;
+    margin-bottom: 12.5px; /* 25% plus grand que l'original */
+    color: #fff; /* Texte en blanc */
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.1),
+    0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.1); /* Effets de texte en rétro-éclairage */
+    cursor: pointer; /* Ajout pour que le pointeur change lors du survol */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le survol */
+}
+
+.keyboard-key:hover {
+    color: inherit; /* Conserve la couleur du texte au survol */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement plus clair au survol */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Effet de rétro-éclairage au survol */
+}
+
+
+.keyboard-button {
+    width: 125px; /* Augmentation de la largeur des touches */
+    height: 125px; /* Augmentation de la hauteur des touches */
+    margin: 0 6.25px; /* Ajustement de la marge extérieure */
+    padding: 12.5px 25px; /* Ajustement de la marge intérieure */
+    font-size: 62.5px; /* Augmentation de la taille de la police */
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Texte en blanc */
+    border: solid 2.5px #fff; /* Bordure plus épaisse */
+    border-radius: 12.5px; /* Coins arrondis */
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-shadow: 0 0 3.75px rgba(255, 255, 255, 0.1), 0 0 12.5px rgba(255, 255, 255, 0.1), 0 0 25px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Keyboard CSS*/
@@ -14,19 +97,7 @@ body{
     padding: 10px;
   }
 
-  .keyboard-row {
-    margin-bottom: 5px;
-  }
 
-  .keyboard-button {
-    margin-right: 5px;
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    cursor: pointer;
-  }
 
   .keyboard-button:hover {
     background-color: #e0e0e0;
@@ -34,11 +105,11 @@ body{
 
 /* Exemple de styles CSS pour KeyboardKey */
 .keyboard-key.correct {
-    background-color: green; /* ou toute autre couleur signifiant "correct" */
+    background-color: #ffac31; /* ou toute autre couleur signifiant "correct" */
 }
 
 .keyboard-key.wrong {
-    background-color: red; /* ou toute autre couleur signifiant "incorrect" */
+    background-color: #ff4568; /* ou toute autre couleur signifiant "incorrect" */
 }
 .pendu-part {
     display: none;
@@ -75,6 +146,8 @@ body{
     position: relative;
     width: 200px; /* Ajuste la taille selon tes besoins */
     height: 250px; /* Ajuste la taille selon tes besoins */
+    margin-left: 25%;
+    margin-right: auto;
 }
 
 .pendu-part {
@@ -99,8 +172,8 @@ body{
 
 .pole {
     width: 10px;
-    height: 80%;
-    bottom: 10px;
+    height: 90%;
+    bottom: 20px;
     left: 50%;
 }
 
@@ -129,7 +202,7 @@ body{
 .body {
     width: 4px;
     height: 50px;
-    top: 50px;
+    top: 53px;
     left: calc(50% + 40%);
 }
 
@@ -140,7 +213,7 @@ body{
 }
 
 .arm.left {
-    left: calc(50% + 10%);
+    left: calc(67% + 10%);
     transform: rotate(45deg);
 }
 
@@ -167,7 +240,7 @@ body{
 
 /* Afficher la partie du pendu */
 .pendu-part.show {
-    display: block
+    display: block;
 }
 
 

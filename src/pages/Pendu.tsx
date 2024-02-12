@@ -70,8 +70,10 @@ const Pendu: React.FC = () => {
     };
 
     return (
-        <div className="Pendu">
+        <div className="Page">
             <Layout />
+            <div className="Pendu">
+
             <h1>Pendu</h1>
             <div className="pendu-container">
                 {drawPendu()}
@@ -79,19 +81,24 @@ const Pendu: React.FC = () => {
             {won ? <div><h2>Félicitations! Tu as trouvé le mot: {WORD}</h2></div> : null}
             {lost ? <div><h2>Dommage! Le mot était: {WORD}</h2></div> : null}
             <Grid length={WORD.length} correctLetters={correctLetters} word={WORD} />
+           <div className="btn-nav"></div>
             <Keyboard handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
-            <div className="attempts">
-                {wrongLetters.map((_, index) => <h2 key={index}>I </h2>)}
-            </div>
-            <a href="/Pendu">
+            <div className="btn-nav">
+                <div className='BtnStat'>
+                <a href="/Pendu">
                 <button type="button" className="btn custom-primary-btn custom-hover">Relancer</button>
             </a>
+                </div>
             <div className='BtnStat'>
                 <a href="/Statistique">
                     <button type="button" className="btn custom-primary-btn custom-hover" >Statistique</button>
                 </a>
             </div>
+            </div>
+
         </div>
+        </div>
+
     );
 };
 

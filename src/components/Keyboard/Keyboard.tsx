@@ -9,10 +9,10 @@ interface Props {
 
 const firstLine = 'AZERTYUIOP';
 const secondLine = 'QSDFGHJKLM';
-const thirdLine = 'WXCVBN⌫⏎';
+const thirdLine = 'WXCVBN';
 
 const Keyboard: React.FC<Props> = ({ handleKeyPress, correctLetters, wrongLetters }) => (
-    <div className="flex justify-center items-center flex-col mt-12">
+    <div className="Clavie">
         <KeyboardRow line={firstLine} handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
         <KeyboardRow line={secondLine} handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
         <KeyboardRow line={thirdLine} handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
