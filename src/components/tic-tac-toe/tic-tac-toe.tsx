@@ -5,21 +5,22 @@ import { StatsContext } from '../StatsContext.tsx'
 import '../../pages/tic-tac-toe.sass';
 
 
+
 export const TicTacToe: React.FC = () => {
 	const initialBoard: BoardArray = Array.from({ length: 3 }, () => Array(3).fill(null));
 	const [board, setBoard] = useState<BoardArray>(initialBoard);
 	const [winner, setWinner] = useState<string | null>(null);
 	const [turn, setTurn] = useState<number>(1);
-	const { stats, setStats } = useContext(StatsContext);
+	const { stats, updateStats } = useContext(StatsContext); // Utilise updateStats
 
 	useEffect(() => {
 		const win = checkWinner(board);
 		if (win) {
 			setWinner(win);
-			updateStats(win);
+			handleStatsUpdate(win);
 		} else if (!isMovesLeft(board)) {
 			setWinner("Draw");
-			updateStats("Draw");
+			handleStatsUpdate("Draw");
 		} else if (turn % 2 === 0) {
 			aiMove();
 		}
@@ -43,16 +44,15 @@ export const TicTacToe: React.FC = () => {
 		}
 	};
 
-	const updateStats = (result: string) => {
-		const newStats = { ...stats, gamesPlayed: stats.gamesPlayed + 1 };
+	const handleStatsUpdate = (result: string) => {
+		// Mise à jour des stats pour le jeu de Morpion ('ticTacToe')
 		if (result === "X") {
-			newStats.wins += 1;
+			updateStats('ticTacToe', { ...stats.ticTacToe, wins: stats.ticTacToe.wins + 1, gamesPlayed: stats.ticTacToe.gamesPlayed + 1 });
 		} else if (result === "O") {
-			newStats.losses += 1;
-		} else {
-			newStats.draws += 1;
+			updateStats('ticTacToe', { ...stats.ticTacToe, losses: stats.ticTacToe.losses + 1, gamesPlayed: stats.ticTacToe.gamesPlayed + 1 });
+		} else { // Cas d'un match nul
+			updateStats('ticTacToe', { ...stats.ticTacToe, gamesPlayed: stats.ticTacToe.gamesPlayed + 1 });
 		}
-		setStats(newStats);
 	};
 
 	const restartGame = () => {
@@ -74,5 +74,4 @@ export const TicTacToe: React.FC = () => {
 			</div>
 		</div>
 	);
-
 };
