@@ -44,7 +44,7 @@ function statsReducer(state: Stats, action: Action): Stats {
     }
 }
 
-export const StatsProvider: React.FC<PropsWithChildren<never>> = ({ children }) => {
+export const StatsProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const [stats, dispatch] = useReducer(statsReducer, defaultStats, () => {
         const savedStats = localStorage.getItem('gameStats');
         return savedStats ? JSON.parse(savedStats) : defaultStats;

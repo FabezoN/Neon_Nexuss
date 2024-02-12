@@ -65,7 +65,7 @@ export const TicTacToe: React.FC = () => {
 		<div className='game'>
 			<h1>Tic-Tac-Toe</h1>
 			<Board board={board} handleClick={handleOnClick} />
-			{winner && <p>{winner === "X" ? "You Win!" : winner === "O" ? "AI Wins!" : "It's a Draw!"}</p>}
+			{winner && <h2>{winner === "X" ? "You Win!" : winner === "O" ? "AI Wins!" : "It's a Draw!"}</h2>}
 			<div className='Buttons'>
 				<button className='btn custom-primary-btn custom-hover' onClick={restartGame}>Restart Game</button>
 					<a href="/Statistique">

@@ -7,21 +7,21 @@ const StatsPage = () => {
 
     return (
         <div className="stats">
-            <h2>Statistiques du jeu Tic-Tac-Toe</h2>
+            <h2 className='StatTicTacToe'>Statistiques du jeu Tic-Tac-Toe</h2>
             <ul>
 
-                <li>Parties jouées : {stats.ticTacToe.gamesPlayed}</li>
-                <li>Victoires : {stats.ticTacToe.wins}</li>
-                <li>Défaites : {stats.ticTacToe.losses}</li>
+                <h4>Parties jouées : {stats.ticTacToe.gamesPlayed}</h4>
+                <h5>Victoires : {stats.ticTacToe.wins}</h5>
+                <h5>Défaites : {stats.ticTacToe.losses}</h5>
                 {/* Supposant que "draws" n'est pas directement géré, calculé comme suit: */}
-                <li>Matchs nuls : {stats.ticTacToe.gamesPlayed - stats.ticTacToe.wins - stats.ticTacToe.losses}</li>
+                <h5>Matchs nuls : {stats.ticTacToe.gamesPlayed - stats.ticTacToe.wins - stats.ticTacToe.losses}</h5>
             </ul>
 
-            <h2>Statistiques du jeu Pendu</h2>
+            <h2 className='StatHangMan' >Statistiques du jeu Pendu </h2>
             <ul>
-                <li>Parties jouées : {stats.hangman.gamesPlayed}</li>
-                <li>Victoires : {stats.hangman.wins}</li>
-                <li>Défaites : {stats.hangman.losses}</li>
+                <h4>Parties jouées : {stats.hangman.gamesPlayed}</h4>
+                <h5>Victoires : {stats.hangman.wins}</h5>
+                <h5>Défaites : {stats.hangman.losses}</h5>
             </ul>
         </div>
     );
