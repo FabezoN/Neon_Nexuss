@@ -5,6 +5,7 @@ import Keyboard from "../components/Keyboard/Keyboard";
 import useRandomWord from '../hook/getRandomWord.ts';
 import Grid from "../components/Pendu/grid";
 import { StatsContext } from '../components/StatsContext';
+import { Link } from "react-router-dom";
 
 const Pendu: React.FC = () => {
     const { name: WORD } = useRandomWord();
@@ -74,29 +75,29 @@ const Pendu: React.FC = () => {
             <Layout />
             <div className="Pendu">
 
-            <h1>Pendu</h1>
-            <div className="pendu-container">
-                {drawPendu()}
-            </div>
-            {won ? <div><h2>Félicitations! Tu as trouvé le mot: {WORD}</h2></div> : null}
-            {lost ? <div><h2>Dommage! Le mot était: {WORD}</h2></div> : null}
-            <Grid length={WORD.length} correctLetters={correctLetters} word={WORD} />
-           <div className="btn-nav"></div>
-            <Keyboard handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
-            <div className="btn-nav">
-                <div className='BtnStat'>
-                <a href="/Pendu">
-                <button type="button" className="btn custom-primary-btn custom-hover">Relancer</button>
-            </a>
+                <h1>Pendu</h1>
+                <div className="pendu-container">
+                    {drawPendu()}
                 </div>
-            <div className='BtnStat'>
-                <a href="/Statistique">
-                    <button type="button" className="btn custom-primary-btn custom-hover" >Statistique</button>
-                </a>
-            </div>
-            </div>
+                {won ? <div><h2>Félicitations! Tu as trouvé le mot: {WORD}</h2></div> : null}
+                {lost ? <div><h2>Dommage! Le mot était: {WORD}</h2></div> : null}
+                <Grid length={WORD.length} correctLetters={correctLetters} word={WORD} />
+                <div className="btn-nav"></div>
+                <Keyboard handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
+                <div className="btn-nav">
+                    <div className='BtnStat'>
+                        <Link to="/pendu">
+                            <button type="button" className="btn custom-primary-btn custom-hover">Relancer</button>
+                        </Link>
+                    </div>
+                    <div className='BtnStat'>
+                        <Link to="/statistique">
+                            <button type="button" className="btn custom-primary-btn custom-hover">Statistique</button>
+                        </Link>
+                    </div>
+                </div>
 
-        </div>
+            </div>
         </div>
 
     );
