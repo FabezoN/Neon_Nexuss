@@ -19,9 +19,9 @@ const StatsPage = () => {
 
             <h2 className='StatHangMan' >Statistiques du jeu Pendu </h2>
             <ul>
-                <li>Parties jouées : {stats.hangman.gamesPlayed}</li>
-                <li>Victoires : {stats.hangman.wins}</li>
-                <li>Défaites : {stats.hangman.losses}</li>
+                <h4>Parties jouées : {stats.hangman.gamesPlayed}</h4>
+                <h5>Victoires : {stats.hangman.wins}</h5>
+                <h5>Défaites : {stats.hangman.losses}</h5>
 
             </ul>
         </div>
