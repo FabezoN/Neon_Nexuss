@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 const useFetch = <T>() => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string|null>(null);
-  const [data, setData] = useState<T|undefined>(undefined);
+  const [error, setError] = useState<string | null>(null);
+  const [data, setData] = useState<T | undefined>(undefined);
 
   const query = async (request: (...params: unknown[]) => Promise<T>) => {
     try {
@@ -14,9 +14,9 @@ const useFetch = <T>() => {
 
       setData(result);
       return result;
-    } catch (e: unknown) {
+    } catch (e) {
       console.error(e);
-      setError(e.message);
+      setError((e as Error).message);
       return null;
     } finally {
       setLoading(false);
