@@ -86,7 +86,7 @@ const Pendu: React.FC = () => {
                 <Keyboard handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
                 <div className="btn-nav">
                     <div className='BtnStat'>
-                        <Link to="/pendu">
+                        <Link to="/Pendu">
                             <button type="button" className="btn custom-primary-btn custom-hover">Relancer</button>
                         </Link>
                     </div>
