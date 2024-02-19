@@ -1,6 +1,6 @@
 // StatsPage.tsx
 import  { useContext } from 'react';
-import { StatsContext } from '../StatsContext'; // Assurez-vous que le chemin est correct
+import { StatsContext } from './StatsContext'; // Assurez-vous que le chemin est correct
 
 const StatsPage = () => {
     const { stats } = useContext(StatsContext);

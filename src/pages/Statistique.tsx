@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import Stat from "../components/Stat/stat.tsx"
+import Stat from "../components/Statistique/stat.tsx"
 import './Statistique.css'
 
 const Statistique: React.FC = () => (

@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import './Pendu.css';
-import Layout from '../components/Layout/Layout';
-import Keyboard from "../components/Keyboard/Keyboard";
+import './HangMan.css';
+import Layout from '../components/Layout/Layout.tsx';
+import Keyboard from "../components/Keyboard/Keyboard.tsx";
 import useRandomWord from '../hook/getRandomWord.ts';
-import Grid from "../components/Pendu/grid";
-import { StatsContext } from '../components/StatsContext';
+import Grid from "../components/HangMan/grid.tsx";
+import { StatsContext } from '../components/Statistique/StatsContext.tsx';
 import { Link } from "react-router-dom";
 
 const Pendu: React.FC = () => {
@@ -74,7 +74,6 @@ const Pendu: React.FC = () => {
         <div className="Page">
             <Layout />
             <div className="Pendu">
-
                 <h1>Pendu</h1>
                 <div className="pendu-container">
                     {drawPendu()}
@@ -86,7 +85,7 @@ const Pendu: React.FC = () => {
                 <Keyboard handleKeyPress={handleKeyPress} correctLetters={correctLetters} wrongLetters={wrongLetters} />
                 <div className="btn-nav">
                     <div className='BtnStat'>
-                        <Link to="/pendu">
+                        <Link to="/Pendu">
                             <button type="button" className="btn custom-primary-btn custom-hover">Relancer</button>
                         </Link>
                     </div>

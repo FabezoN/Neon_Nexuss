@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Board } from './board.tsx';
-import { BoardArray, checkWinner, isMovesLeft, findBestMove } from './gameLogic';
-import { StatsContext } from '../StatsContext.tsx'
+import { BoardArray, checkWinner, isMovesLeft, findBestMove } from './gameLogic.ts';
+import { StatsContext } from '../Statistique/StatsContext.tsx'
 import '../../pages/tic-tac-toe.sass';
 import { Link } from 'react-router-dom';
 
@@ -68,7 +68,7 @@ export const TicTacToe: React.FC = () => {
 			<Board board={board} handleClick={handleOnClick} />
 			{winner && <h2>{winner === "X" ? "You Win!" : winner === "O" ? "AI Wins!" : "It's a Draw!"}</h2>}
 			<div className='Buttons'>
-				<button className='btn custom-primary-btn custom-hover' onClick={restartGame}>Restart Game</button>
+				<button className='btn custom-primary-btn custom-hover' onClick={restartGame}>Relancer</button>
 				<Link to="/statistique">
 					<button type="button" className="btn custom-primary-btn custom-hover" >Statistique</button>
 				</Link>

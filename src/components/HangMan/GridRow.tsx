@@ -1,6 +1,6 @@
 import React from 'react';
 import GridBox from './GridBox.tsx';
-import { generateArray } from '../../helpers/genericHelper';
+import { generateArray } from '../../helpers/genericHelper.ts';
 
 interface Props {
     length: number;
